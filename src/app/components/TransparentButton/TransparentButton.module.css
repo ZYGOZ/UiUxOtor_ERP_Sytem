@@ -1,0 +1,35 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, #14add6 0%, #384295 100%) border-box;
+  color: #313149;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  display: inline-block;
+}
+.button:hover {
+  background: linear-gradient(135deg, #14add6 0%, #384295 100%) padding-box,
+    linear-gradient(135deg, #14add6 0%, #384295 100%) border-box;
+}
+
+.button:hover > span {
+  color: white;
+  padding: 0px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  -webkit-background-clip: text;
+}
+.span {
+  color: transparent;
+  background: linear-gradient(135deg, #14add6 0%, #384295 100%);
+  padding: 0px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  -webkit-background-clip: text;
+}

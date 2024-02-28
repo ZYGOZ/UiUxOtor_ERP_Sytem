@@ -1,0 +1,17 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, rgb(20, 173, 214), rgb(56, 66, 149) 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background: linear-gradient(135deg, rgb(20, 153, 194), rgb(46, 56, 129) 100%);
+}
