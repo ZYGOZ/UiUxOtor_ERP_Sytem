@@ -8,7 +8,7 @@ import TransparentButton from "@/app/components/TransparentButton/TransparentBut
 import Logo from "../../../../public/icons/Logo";
 import Image from "next/image";
 
-const CodeComfirmationPage: React.FC = () => {
+const CodeConfirmationPage: React.FC = () => {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [error, setError] = useState("");
@@ -76,4 +76,4 @@ const CodeComfirmationPage: React.FC = () => {
   );
 };
 
-export default CodeComfirmationPage;
+export default CodeConfirmationPage;
