@@ -1,27 +1,17 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import React from "react";
 import styles from "./styles.module.css";
-import CustomScrollView from "@/app/components/CustomScrollView/CustomScrollView";
 
-const MemoPage = () => {
-  const [data, setData] = useState<any>(null);
-  const router = useRouter();
-
-  useEffect(() => {
-    fetchMemo();
-  }, []);
-
-  const fetchMemo = async () => {
-    try {
-      const res = await fetch("http://localhost:3000/dashboard/api/memo");
-      const data = await res.json();
-      setData(data);
-    } catch (error) {
-      console.error("Error fetching employees: ", error);
-    }
-  };
-
+async function fetchMemo() {
+  try {
+    const res = await fetch("http://localhost:3000/dashboard/api/memo");
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching staff: ", error);
+  }
+}
+async function MemoPage() {
+  const data = await fetchMemo();
   return (
     <div style={{ width: "100%" }}>
       <div style={{ display: "flex", flexDirection: "row" }}>
@@ -51,6 +41,6 @@ const MemoPage = () => {
       </div>
     </div>
   );
-};
+}
 
 export default MemoPage;

@@ -7,12 +7,14 @@ import CustomButton from "@/app/components/DefaultButton/DefaultButton";
 import TransparentButton from "@/app/components/TransparentButton/TransparentButton";
 import Logo from "../../../../public/icons/Logo";
 import Image from "next/image";
+import worker from "/worker.png";
 import Link from "next/link";
 
-const LoginPage: React.FC = () => {
+const PasswordResetPage: React.FC = () => {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState("");
 
@@ -39,58 +41,34 @@ const LoginPage: React.FC = () => {
             </TransparentButton>
           </div>
           <div style={{ marginBottom: "48px" }}>
-            <p style={{ margin: 0 }}>Welcome back!!</p>
+            <p style={{ margin: 0 }}>Password recovery.</p>
             <p style={{ margin: 0, fontSize: "24px", fontWeight: "800" }}>
-              Please Sign In
+              Password reset
             </p>
+            <p style={{ margin: 0 }}>Kindly enter a new password.</p>
           </div>
           <div className={styles.form}>
-            <div style={{ marginBottom: "24px" }}>
-              <CustomInput
-                label="Email address"
-                placeholder="Enter email address"
-                type="text"
-                value={username}
-                onChange={(e: any) => setUsername(e.target.value)}
-              />
-            </div>
             <div style={{ marginBottom: "16px" }}>
               <CustomInput
-                label="Password"
+                label="New password"
                 placeholder="*******"
                 type="password"
                 value={password}
                 onChange={(e: any) => setPassword(e.target.value)}
               />
             </div>
-            <div
-              style={{
-                height: "24px",
-                display: "flex",
-                justifyContent: "space-between",
-                marginBottom: "48px",
-              }}
-            >
-              <label className={styles.RememberMe}>
-                <input
-                  type="checkbox"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                />
-                Remember Me
-              </label>
-              <Link
-                style={{ textDecorationLine: "none" }}
-                href="forgotPassword"
-              >
-                <span className={styles.ForgotPassword}>
-                  I forgot my password
-                </span>
-              </Link>
+            <div style={{ marginBottom: "16px" }}>
+              <CustomInput
+                label="Confirm new password"
+                placeholder="*******"
+                type="password"
+                value={confirmPassword}
+                onChange={(e: any) => setConfirmPassword(e.target.value)}
+              />
             </div>
           </div>
           <div>
-            <CustomButton onClick={handleSubmit}>Sign In</CustomButton>
+            <CustomButton onClick={handleSubmit}>Send</CustomButton>
             {error && <p>{error}</p>}
           </div>
         </div>
@@ -113,4 +91,4 @@ const LoginPage: React.FC = () => {
   );
 };
 
-export default LoginPage;
+export default PasswordResetPage;

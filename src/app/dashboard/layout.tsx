@@ -1,39 +1,48 @@
 import CustomBox from "../components/CustomBox/CustomBox";
+import TotalApplicationsDefault from "./@totalApplications/default";
+import TotalDepartmentsPage from "./@totalDepartments/page";
 
-export default function Layout({
+async function getArtistAlbums(username: string) {
+  const res = await fetch(`https://api.example.com/artist/${username}/albums`);
+  return res.json();
+}
+
+export default async function Layout({
   children,
   graphics,
-  grossSalary,
-  netSalary,
+  staffNumber,
+  totalApplications,
   memo,
   staffList,
-  totalLoan,
-  totalTax,
+  paymentVouchers,
+  totalProjects,
+  totalDepartments,
 }: Readonly<{
   children: React.ReactNode;
   graphics: React.ReactNode;
-  grossSalary: React.ReactNode;
-  netSalary: React.ReactNode;
+  staffNumber: React.ReactNode;
+  totalApplications: React.ReactNode;
   memo: React.ReactNode;
   staffList: React.ReactNode;
-  totalLoan: React.ReactNode;
-  totalTax: React.ReactNode;
+  paymentVouchers: React.ReactNode;
+  totalProjects: React.ReactNode;
+  totalDepartments: React.ReactNode;
 }>) {
   return (
     <div style={{ paddingLeft: 6 }}>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div style={{ width: "100%" }}>
-            <CustomBox>{grossSalary}</CustomBox>
+            <CustomBox>{staffNumber}</CustomBox>
           </div>{" "}
           <div style={{ width: "100%" }}>
-            <CustomBox>{netSalary}</CustomBox>
+            <CustomBox>{totalApplications}</CustomBox>
           </div>{" "}
           <div style={{ width: "100%" }}>
-            <CustomBox>{totalLoan}</CustomBox>
+            <CustomBox>{totalProjects}</CustomBox>
           </div>{" "}
           <div style={{ width: "100%" }}>
-            <CustomBox>{totalTax}</CustomBox>
+            <CustomBox>{totalDepartments}</CustomBox>
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "row" }}>
@@ -46,10 +55,10 @@ export default function Layout({
         </div>
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div style={{ width: "50%" }}>
-            <CustomBox>{memo}</CustomBox>
+            <CustomBox>{paymentVouchers}</CustomBox>
           </div>
           <div style={{ width: "50%" }}>
-            <CustomBox>{graphics}</CustomBox>
+            <CustomBox>{memo}</CustomBox>
           </div>
         </div>
       </div>

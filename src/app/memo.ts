@@ -30,7 +30,7 @@ const memo: Memo[] = [
     title: "Meeting Minutes",
     sentFrom: "David Lee",
     sentTo: "Sophia Wang",
-    status: "Declined",
+    status: "Rejected",
   },
   {
     id: "4",
@@ -62,7 +62,7 @@ const memo: Memo[] = [
     title: "Product Launch Brief",
     sentFrom: "Sophie Martin",
     sentTo: "Luis Hernandez",
-    status: "Declined",
+    status: "Rejected",
   },
   {
     id: "8",

@@ -1,19 +1,19 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-async function fetchStaff() {
+async function fetchPaymentVouchers() {
   try {
-    const res = await fetch("http://localhost:3000/dashboard/api/staff");
+    const res = await fetch(
+      "http://localhost:3000/dashboard/api/paymentVouchers"
+    );
     const data = await res.json();
     return data;
   } catch (error) {
     console.error("Error fetching staff: ", error);
   }
 }
-
-async function StaffPage() {
-  const data = await fetchStaff();
-
+async function PaymentVouchersPage() {
+  const data = await fetchPaymentVouchers();
   return (
     <div style={{ width: "100%" }}>
       <div style={{ display: "flex", flexDirection: "row" }}>
@@ -22,9 +22,9 @@ async function StaffPage() {
       <div>
         <ul className={styles.horizontal_list}>
           <li className={styles.serialNumber}>S/N</li>
-          <li className={styles.staffName}>Staff Name</li>
-          <li className={styles.staffRole}>Staff Role</li>
-          <li className={styles.designation}>Designation</li>
+          <li className={styles.subject}>Subject</li>
+          <li className={styles.date}>Date</li>
+          <li className={styles.status}>Status</li>
         </ul>
       </div>
       <div>
@@ -32,9 +32,9 @@ async function StaffPage() {
           {data?.map((staff: any) => (
             <div key={staff.id}>
               <li className={styles.serialNumber}>{staff.serialNumber}</li>
-              <li className={styles.staffName}>{staff.staffName}</li>
-              <li className={styles.staffRole}>{staff.staffRole}</li>
-              <li className={styles.designation}>{staff.designation}</li>
+              <li className={styles.subject}>{staff.subject}</li>
+              <li className={styles.date}>{staff.date}</li>
+              <li className={styles.status}>{staff.status}</li>
             </div>
           ))}
         </ul>
@@ -43,4 +43,4 @@ async function StaffPage() {
   );
 }
 
-export default StaffPage;
+export default PaymentVouchersPage;

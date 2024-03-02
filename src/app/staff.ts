@@ -1,88 +1,89 @@
 interface Staff {
   id: string;
   serialNumber: string;
-  title: string;
-  sentFrom: string;
-  sentTo: string;
+  staffName: string;
+  staffRole: string;
+  designation: string;
 }
 
 const staff: Staff[] = [
   {
     id: "1",
     serialNumber: "01",
-    title: "Operations memo",
-    sentFrom: "Otor Jhon",
-    sentTo: "Ibrahim Sadiq",
+    staffName: "Abubakar Ismaila Goje",
+    staffRole: "Admin",
+    designation: "Human Resource Dept.",
   },
   {
     id: "2",
     serialNumber: "02",
-    title: "Financial Report",
-    sentFrom: "Emily Smith",
-    sentTo: "Michael Johnson",
+    staffName: "Bankole Olanrewaju",
+    staffRole: "HOD I.T",
+    designation: "Peoples and Operation",
   },
   {
     id: "3",
     serialNumber: "03",
-    title: "Meeting Minutes",
-    sentFrom: "David Lee",
-    sentTo: "Sophia Wang",
+    staffName: "John Doe",
+    staffRole: "Software Developer",
+    designation: "Engineering",
   },
   {
     id: "4",
     serialNumber: "04",
-    title: "Project Proposal",
-    sentFrom: "Alexandre Dubois",
-    sentTo: "Maria Garcia",
+    staffName: "Alice Smith",
+    staffRole: "Marketing Manager",
+    designation: "Marketing Department",
   },
   {
     id: "5",
     serialNumber: "05",
-    title: "Training Schedule",
-    sentFrom: "Jennifer Patel",
-    sentTo: "Chen Wei",
+    staffName: "Emily Johnson",
+    staffRole: "Financial Analyst",
+    designation: "Finance Department",
   },
   {
     id: "6",
     serialNumber: "06",
-    title: "Policy Update",
-    sentFrom: "Nathan Brown",
-    sentTo: "Anusha Kumar",
+    staffName: "Mohammed Patel",
+    staffRole: "Customer Support Representative",
+    designation: "Customer Service",
   },
   {
     id: "7",
     serialNumber: "07",
-    title: "Product Launch Brief",
-    sentFrom: "Sophie Martin",
-    sentTo: "Luis Hernandez",
+    staffName: "Sophia Garcia",
+    staffRole: "Graphic Designer",
+    designation: "Creative Department",
   },
   {
     id: "8",
     serialNumber: "08",
-    title: "Customer Feedback Summary",
-    sentFrom: "Lucas Anderson",
-    sentTo: "Elena Petrova",
+    staffName: "David Lee",
+    staffRole: "Project Manager",
+    designation: "Project Management",
   },
   {
     id: "9",
     serialNumber: "09",
-    title: "Monthly Performance Report",
-    sentFrom: "Mia Johnson",
-    sentTo: "Ahmed Khan",
+    staffName: "Linda Nguyen",
+    staffRole: "Quality Assurance Engineer",
+    designation: "Quality Assurance",
   },
   {
     id: "10",
     serialNumber: "10",
-    title: "Employee Handbook Updates",
-    sentFrom: "Aisha Al-Mansoori",
-    sentTo: "Giovanni Rossi",
+    staffName: "Michael Johnson",
+    staffRole: "Sales Representative",
+    designation: "Sales Department",
   },
   {
     id: "11",
     serialNumber: "11",
-    title: "Marketing Strategy Proposal",
-    sentFrom: "Lei Wang",
-    sentTo: "Daniel Rodriguez",
+    staffName: "Emma Davis",
+    staffRole: "Content Writer",
+    designation: "Content Department",
   },
 ];
+
 export { staff };

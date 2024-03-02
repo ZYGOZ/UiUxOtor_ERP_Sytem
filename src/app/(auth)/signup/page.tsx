@@ -14,6 +14,7 @@ const SignUpPage: React.FC = () => {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState("");
 
@@ -31,12 +32,18 @@ const SignUpPage: React.FC = () => {
         <div className={styles.form_container2}>
           <div className={styles.logo_container}>
             <Logo />
-            <TransparentButton onClick={() => {}}>Sign Up</TransparentButton>
+            <TransparentButton
+              onClick={() => {
+                router.push("signIn");
+              }}
+            >
+              Sign In
+            </TransparentButton>
           </div>
           <div style={{ marginBottom: "48px" }}>
-            <p style={{ margin: 0 }}>Welcome back!!</p>
+            <p style={{ margin: 0 }}>Welcome!!</p>
             <p style={{ margin: 0, fontSize: "24px", fontWeight: "800" }}>
-              Please Sign In
+              Sign Up
             </p>
           </div>
           <div className={styles.form}>
@@ -58,6 +65,15 @@ const SignUpPage: React.FC = () => {
                 onChange={(e: any) => setPassword(e.target.value)}
               />
             </div>
+            <div style={{ marginBottom: "16px" }}>
+              <CustomInput
+                label="Confirm password"
+                placeholder="*******"
+                type="password"
+                value={confirmPassword}
+                onChange={(e: any) => setConfirmPassword(e.target.value)}
+              />
+            </div>
             <div
               style={{
                 height: "24px",
@@ -74,15 +90,10 @@ const SignUpPage: React.FC = () => {
                 />
                 Remember Me
               </label>
-              <Link style={{ textDecorationLine: "none" }} href="pwreset">
-                <span className={styles.ForgotPassword}>
-                  I forgot my password
-                </span>
-              </Link>
             </div>
           </div>
           <div>
-            <CustomButton onClick={handleSubmit}>Sign In</CustomButton>
+            <CustomButton onClick={handleSubmit}>Sign Up</CustomButton>
             {error && <p>{error}</p>}
           </div>
         </div>

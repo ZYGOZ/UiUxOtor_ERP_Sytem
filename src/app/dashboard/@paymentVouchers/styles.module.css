@@ -8,6 +8,7 @@
   font-size: 12px;
   font-weight: 800;
   line-height: 16px;
+  display: inline-block;
 }
 
 .vertical_list {
@@ -21,7 +22,6 @@
   justify-content: flex-start;
   margin-bottom: 24px;
 }
-
 .vertical_list li {
   font-size: 14px;
   font-weight: 400;
@@ -31,14 +31,14 @@
   width: 10%;
 }
 
-.staffName {
-  width: 35%;
+.subject {
+  width: 60%;
 }
 
-.staffRole {
-  width: 25%;
+.date {
+  width: 20%;
 }
 
-.designation {
-  width: 30%;
+.status {
+  width: 14%;
 }
