@@ -22,12 +22,77 @@ const paths = [
 ];
 
 const links = [
-  { title: "Dashboard", href: "/", icon: "DashboardIcon", isActive: false },
+  {
+    title: "Dashboard",
+    href: "/dashboard",
+    icon: "DashboardIcon",
+    isActive: false,
+  },
   { title: "Staff", href: "/staff", icon: "StaffIcon", isActive: false },
   {
     title: "Payment Voucher",
-    href: "/payment_voucher",
+    href: "/paymentVoucher",
     icon: "StaffIcon",
+    isActive: false,
+  },
+  {
+    title: "Payroll",
+    href: "/payroll",
+    icon: "PayrollIcon",
+    isActive: false,
+  },
+  {
+    title: "Memo",
+    href: "/memo",
+    icon: "MemoIcon",
+    isActive: false,
+  },
+  {
+    title: "Circulars",
+    href: "/circulars",
+    icon: "CircularsIcon",
+    isActive: false,
+  },
+  {
+    title: "Maintenance",
+    href: "/maintenance",
+    icon: "MaintenanceIcon",
+    isActive: false,
+  },
+  {
+    title: "Logistics",
+    href: "/logistics",
+    icon: "LogisticsIcon",
+    isActive: false,
+  },
+  {
+    title: "Office Budget",
+    href: "/officeBudget",
+    icon: "OfficeBudgetIcon",
+    isActive: false,
+  },
+  {
+    title: "Stocks and Inventory",
+    href: "/stocksAndInventory",
+    icon: "StocksIcon",
+    isActive: false,
+  },
+  {
+    title: "Notifications",
+    href: "/notifications",
+    icon: "NotificationsIcon",
+    isActive: false,
+  },
+  {
+    title: "Capacity Building",
+    href: "/capacityBuilding",
+    icon: "CapacityBuildingIcon",
+    isActive: false,
+  },
+  {
+    title: "Procurements",
+    href: "/procurements",
+    icon: "ProcurementsIcon",
     isActive: false,
   },
 ];
@@ -104,7 +169,7 @@ export default function RootLayout({
                 <ArrowDown className={styles.arrow_down} />
               </div>
             </div>
-            <div className="flex-1">{children}</div>
+            <div>{children}</div>
           </div>
         </div>
       </body>
