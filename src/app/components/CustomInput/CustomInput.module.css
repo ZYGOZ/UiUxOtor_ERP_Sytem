@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.label {
+  font-size: 14px;
+  line-height: 24px;
+  color: #121212;
+}
+
+.input {
+  color: rgb(163, 163, 163);
+  width: 350px;
+  height: 50px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  padding: 0px 12px;
+}
+
+.toggleButton {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.toggleButton.hidePassword::after {
+  width: 0;
+}
+
+.toggleButton.showPassword::after {
+  width: 6px;
+}

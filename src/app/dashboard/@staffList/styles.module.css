@@ -1,0 +1,44 @@
+.horizontal_list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.horizontal_list li {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+}
+
+.vertical_list {
+  padding: 0;
+  list-style-type: none;
+  overflow-y: scroll;
+  height: 206px;
+}
+.vertical_list div {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.vertical_list li {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.serialNumber {
+  width: 10%;
+}
+
+.staffName {
+  width: 35%;
+}
+
+.staffRole {
+  width: 25%;
+}
+
+.designation {
+  width: 30%;
+}
