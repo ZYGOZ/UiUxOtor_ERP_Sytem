@@ -1,15 +1,8 @@
+"use client";
 import CustomBox from "../components/CustomBox/CustomBox";
-import TotalApplicationsDefault from "./@totalApplications/default";
-import TotalDepartmentsPage from "./@totalDepartments/page";
 
-async function getArtistAlbums(username: string) {
-  const res = await fetch(`https://api.example.com/artist/${username}/albums`);
-  return res.json();
-}
-
-export default async function Layout({
+export default function Layout({
   children,
-  graphics,
   staffNumber,
   totalApplications,
   memo,
@@ -19,7 +12,6 @@ export default async function Layout({
   totalDepartments,
 }: Readonly<{
   children: React.ReactNode;
-  graphics: React.ReactNode;
   staffNumber: React.ReactNode;
   totalApplications: React.ReactNode;
   memo: React.ReactNode;
